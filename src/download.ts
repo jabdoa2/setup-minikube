@@ -11,11 +11,11 @@ export const getDownloadURL = (version: string): string => {
   const suffix = osPlat === 'win32' ? '.exe' : ''
   switch (version) {
     case 'latest':
-      return `https://github.com/kubernetes/minikube/releases/latest/download/minikube-${platform}-amd64${suffix}`
+      return `https://github.com/kubernetes/minikube/releases/latest/download/minikube-${platform}-arm64${suffix}`
     case 'head':
-      return `https://storage.googleapis.com/minikube-builds/master/minikube-${platform}-amd64${suffix}`
+      return `https://storage.googleapis.com/minikube-builds/master/minikube-${platform}-arm64${suffix}`
     default:
-      return `https://github.com/kubernetes/minikube/releases/download/v${version}/minikube-${platform}-amd64${suffix}`
+      return `https://github.com/kubernetes/minikube/releases/download/v${version}/minikube-${platform}-arm64${suffix}`
   }
 }
 
